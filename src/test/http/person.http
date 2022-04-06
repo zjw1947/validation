@@ -1,0 +1,10 @@
+# 基础测试
+POST {{host}}/person/test
+
+###
+POST {{host}}/person/test
+Content-Type: application/json
+
+{
+"name": "张三"
+}
