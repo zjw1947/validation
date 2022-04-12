@@ -33,8 +33,8 @@ public class Basics {
     private String idCard;
 
     /** 年龄 */
-    //被注释的元素必须在合适的范围内
-    @Range(min = 20, max = 60)
+    //被注释的元素必须在合适的范围内      message使用el表达式
+    @Range(min = 20, max = 60, message = "年龄值需在{min}和{max}之间")
     private Integer age;
 
     /** 出生日期 */

@@ -1,10 +1,58 @@
-# 基础测试
-POST {{host}}/person/test
-
-###
-POST {{host}}/person/test
+### 手动校验
+POST {{host}}/person/add
 Content-Type: application/json
 
 {
-"name": "张三"
+  "id": "123",
+  "name": "张三"
 }
+
+
+### 错误不处理
+POST {{host}}/person/add1
+Content-Type: application/json
+
+{
+  "id": "123",
+  "name": "张三"
+}
+
+
+### 错误返回
+POST {{host}}/person/add2
+Content-Type: application/json
+
+{
+  "id": "123",
+  "name": "张三"
+}
+
+
+### 级联校验
+POST {{host}}/person/add3
+Content-Type: application/json
+
+{
+  "id": "123",
+  "name": "张三",
+  "student": {}
+}
+
+
+### 分组校验
+POST {{host}}/person/add4
+Content-Type: application/json
+
+//  "id": "123",
+{
+
+  "name": "张三"
+}
+
+
+### 校验参数
+GET {{host}}/person/find
+
+
+### 校验返回值
+GET {{host}}/person/find1
