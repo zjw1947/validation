@@ -50,6 +50,16 @@ Content-Type: application/json
 }
 
 
+### service层校验
+POST {{host}}/person/add5
+Content-Type: application/json
+
+{
+  "id": "123"
+
+}
+
+
 ### 校验参数
 GET {{host}}/person/find
 

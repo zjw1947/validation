@@ -3,13 +3,14 @@ package com.validator.web.controller;
 import com.validator.base.domain.Basics;
 import com.validator.web.api.ApiResult;
 import com.validator.web.domain.Person;
-import org.graalvm.compiler.nodes.NodeView;
+import com.validator.web.service.PersonService;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.validation.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -91,6 +92,18 @@ public class PersonController {
         if (results.hasErrors()) {
             return ApiResult.error(results);
         }
+        return new ApiResult().success();
+    }
+
+
+    @Resource
+    private PersonService personService;
+    /**
+     * service层验证
+     */
+    @PostMapping("add5")
+    public ApiResult add5(@RequestBody Person person) {
+        personService.add(person);
         return new ApiResult().success();
     }
 
