@@ -36,6 +36,9 @@ public class BaseTest {
         basics.setPortrait("http://www.baidi.com");
         basics.setHobby("跑步");
 
+
+
+
         Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
         //一个参数校验失败直接结束校验
 //        Validator validator = Validation.byProvider(HibernateValidator.class).configure().failFast(true).buildValidatorFactory().getValidator();

@@ -6,9 +6,9 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <!-- 低版本spring boot 自动引入了validation相关依赖 -->
-        <!--<version>2.1.9.RELEASE</version>-->
+        <version>2.1.9.RELEASE</version>
         <!-- 高版本spring boot 需自己手动引入 -->
-        <version>2.6.4</version>
+        <!--<version>2.6.4</version>-->
         <relativePath/>
     </parent>
     <groupId>com.example</groupId>

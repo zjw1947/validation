@@ -22,7 +22,6 @@ public class ControllerActive {
 
     // @Validated 在方法上
     @ExceptionHandler(value = BindException.class)
-
     public ApiResult exceptionHandler(BindException ex){
         return ApiResult.error(ex.getBindingResult());
     }
